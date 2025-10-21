@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nasser Manessour — Je conduis. Je sécurise. Je livre.</title>
+    <meta name="description" content="One‑pager CV à forte personnalité : transport, logistique, sécurité, relation client. Permis B • C1 • AM. Basé à Marseille." />
+    <style>
+        :root {
+            --ink: #0a1021;
+            --bg1: #0b142b;
+            --bg2: #0d1a3a;
+            --sand: #f5e9d0;
+            --coral: #ff7a6a;
+            --sea: #6ad5ff;
+            --olive: #93c28b;
+            --muted: rgba(245, 233, 208, .75);
+            --card: rgba(255, 255, 255, .06);
+            --radius: 22px;
+            --shadow: 0 18px 50px rgba(0, 0, 30, .35);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            color: var(--sand);
+            font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background:
+                radial-gradient(1200px 500px at 95% -10%, rgba(255, 122, 106, .25), transparent 55%),
+                radial-gradient(900px 520px at -15% 10%, rgba(106, 213, 255, .22), transparent 60%),
+                linear-gradient(180deg, var(--bg1), var(--bg2));
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important
+            }
+        }
+
+        section {
+            background: transparent
+        }
+
+        .wrap {
+            max-width: clamp(320px, 92vw, 1200px);
+            margin: auto;
+            padding: clamp(18px, 4vw, 32px) clamp(14px, 4vw, 22px) 80px
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        /* on ne veut plus le texte NM ni le dégradé */
+        .logo {
+            width: 68px;
+            height: 68px;
+            border-radius: 18px;
+            overflow: hidden;
+            /* masque l'image dans les coins arrondis */
+            background: none;
+            /* retire le conic-gradient */
+            box-shadow: var(--shadow);
+            position: relative;
+            animation: floaty 5s ease-in-out infinite;
+        }
+
+        .logo::after {
+            content: none;
+        }
+
+        /* retire le "NM" */
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* remplit le cadre sans déformer */
+            display: block;
+        }
+
+
+        .title {
+            display: flex;
+            flex-direction: column
+        }
+
+        .title b {
+            font-size: clamp(20px, 4vw, 34px);
+            letter-spacing: .2px
+        }
+
+        .title span {
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .cta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            appearance: none;
+            border: 0;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: var(--sand);
+            color: var(--ink);
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: var(--shadow)
+        }
+
+        .btn.alt {
+            background: transparent;
+            color: var(--sand);
+            border: 1px solid rgba(245, 233, 208, .35)
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--sea);
+            outline-offset: 2px
+        }
+
+        .hero {
+            margin: 26px 0 10px;
+            padding: clamp(18px, 3.2vw, 26px);
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+            border: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .kicker {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            font-weight: 800;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: var(--bg1);
+            background: var(--sea);
+            padding: 6px 10px;
+            border-radius: 999px
+        }
+
+        h1 {
+            margin: 12px 0 6px;
+            font-size: clamp(26px, 6vw, 44px);
+            line-height: 1.1
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(14px, 2.6vw, 16px)
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 14px;
+            margin: 22px 0
+        }
+
+        .stat {
+            grid-column: span 12;
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: 16px;
+            padding: 14px 16px
+        }
+
+        .stat b {
+            font-size: clamp(22px, 5vw, 36px)
+        }
+
+        .stat small {
+            display: block;
+            color: var(--muted);
+            font-size: clamp(12px, 2.6vw, 14px)
+        }
+
+        @media(min-width:760px) {
+            .stat {
+                grid-column: span 4
+            }
+        }
+
+        .lanes {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: clamp(12px, 2.8vw, 20px);
+            margin: 28px 0
+        }
+
+        .lane {
+            grid-column: span 12;
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, .1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .035))
+        }
+
+        @media(min-width:900px) {
+            .lane {
+                grid-column: span 6
+            }
+        }
+
+        .lane h3 {
+            margin: 0 0 6px;
+            font-size: clamp(18px, 2.6vw, 22px)
+        }
+
+        .tagrow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 8px 0 2px
+        }
+
+        .tag {
+            border: 1px solid rgba(255, 255, 255, .15);
+            color: var(--sand);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 13px;
+            background: rgba(0, 0, 0, .15)
+        }
+
+        .lane ul {
+            margin: 8px 0 0;
+            padding-left: 18px
+        }
+
+        .lane li {
+            margin: 6px 0
+        }
+
+        /* Quotes — empilées sur mobile, 3 par ligne en ≥900px */
+        .quote {
+            grid-column: 1 / -1;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px dashed rgba(245, 233, 208, .35);
+            color: var(--muted);
+            font-style: italic;
+            font-size: clamp(14px, 2.8vw, 18px);
+            line-height: 1.65;
+            text-align: center;
+            margin: 16px 0
+        }
+
+        @media(min-width:900px) {
+            .quote {
+                grid-column: span 4;
+                margin: 10px 0
+            }
+        }
+
+        .footer {
+            position: sticky;
+            bottom: 12px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            color: var(--sand);
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(17, 24, 39, 0.7);
+        }
+
+
+        @keyframes floaty {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-3px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        @media (max-width:480px) {
+            .logo {
+                width: 48px;
+                height: 48px
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center
+            }
+
+            header {
+                gap: 10px
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #111
+            }
+
+            .logo,
+            .footer,
+            .btn {
+                display: none
+            }
+
+            .lane,
+            .stat {
+                border: 1px solid #ddd;
+                background: #fff
+            }
+
+            .kicker {
+                background: #111;
+                color: #fff
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <div class="title">
+                    <b>Nasser Manessour</b>
+                    <span>Marseille — Transports • Logistique • Sécurité</span>
+                </div>
+            </div>
+            <nav class="cta" aria-label="Contact">
+                <a class="btn" href="tel:+33627543449">📞 Appeler</a>
+                <a class="btn alt" href="mailto:haron.ilian@me.com">✉️ Écrire</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <span class="kicker">Disponible immédiatement</span>
+            <h1>Je conduis.<br>Je sécurise.<br>Je livre.</h1>
+            <p class="lead">30 ans d’expériences cumulées, du chantier à la collecte, du froid à la livraison. Fiabilité, sécurité, relation client.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat"><b>30+</b><small>années d’expériences croisées</small></div>
+            <div class="stat"><b>4</b><small>métiers maîtrisés (chauffeur, cariste, vendeur, animateur)</small></div>
+            <div class="stat"><b>B • C1 • AM</b><small>permis — sécurité et conformité</small></div>
+        </section>
+
+        <section class="lanes">
+            <article class="lane">
+                <h3>🚚 Chauffeur — transport de marchandises</h3>
+                <div class="tagrow">
+                    <span class="tag">Itinéraires & horaires</span>
+                    <span class="tag">Sécurité & conformité</span>
+                    <span class="tag">Technologies embarquées</span>
+                    <span class="tag">Gestion de flotte</span>
+                </div>
+                <ul>
+                    <li>Planifier, livrer, respecter le temps et la chaîne logistique.</li>
+                    <li>Assurer la sécurité des biens et des personnes, réagir aux imprévus.</li>
+                    <li>Suivre les tournées via logiciels et outils connectés.</li>
+                </ul>
+            </article>
+
+            <article class="lane">
+                <h3>🏗️ Cariste — manutention & stocks</h3>
+                <div class="tagrow">
+                    <span class="tag">Engins de portage</span>
+                    <span class="tag">Réception & gerbage</span>
+                    <span class="tag">Qualité / Quantité</span>
+                    <span class="tag">AS400</span>
+                </div>
+                <ul>
+                    <li>Maîtrise des engins, gestes pros, vigilance HSE.</li>
+                    <li>Inventaires, traçabilité, contrôle Q/Q.</li>
+                </ul>
+            </article>
+
+            <article class="lane">
+                <h3>🛒 Vendeur — relation client & négo</h3>
+                <div class="tagrow">
+                    <span class="tag">Produits & services</span>
+                    <span class="tag">CRM & stocks</span>
+                    <span class="tag">Écoute active</span>
+                    <span class="tag">Négociation</span>
+                </div>
+                <ul>
+                    <li>Informer, conseiller, conclure avec courtoisie.</li>
+                    <li>Rédiger des actes commerciaux, s’adapter au besoin.</li>
+                </ul>
+            </article>
+
+            <article class="lane">
+                <h3>🎯 Animateur — encadrement & sécurité des publics</h3>
+                <div class="tagrow">
+                    <span class="tag">Pédagogie</span>
+                    <span class="tag">Gestion d’imprévus</span>
+                    <span class="tag">Climat de confiance</span>
+                    <span class="tag">Esprit d’équipe</span>
+                </div>
+                <ul>
+                    <li>Concevoir des activités, poser des règles claires.</li>
+                    <li>Garder son sang‑froid et coordonner les réponses.</li>
+                </ul>
+            </article>
+
+            <div class="quote">« On me décrit fiable et calme, surtout dans les moments tendus. Ma priorité : livrer à l’heure en toute sécurité. »</div>
+            <div class="quote">« Chaque trajet est une promesse : celle d’arriver à bon port, dans les temps et en confiance. »</div>
+            <div class="quote">« Le respect, la sécurité et la rigueur sont mes meilleurs compagnons de route. »</div>
+        </section>
+
+        <div class="footer">
+            <span class="chip">📍 Marseille</span>
+            <span class="chip">🕑 Horaires étendus</span>
+            <span class="chip">🧯 S.S.T</span>
+            <span class="chip">🤝 Travail en confiance</span>
+        </div>
+    </div>
+</body>
+
+</html>
