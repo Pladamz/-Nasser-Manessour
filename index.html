@@ -77,17 +77,17 @@
 
         /* on ne veut plus le texte NM ni le dégradé */
         .logo {
-            width: 68px;
-            height: 68px;
-            border-radius: 18px;
+            width: 110px;
+            /* avant : 68px */
+            height: 110px;
+            border-radius: 22px;
             overflow: hidden;
-            /* masque l'image dans les coins arrondis */
             background: none;
-            /* retire le conic-gradient */
             box-shadow: var(--shadow);
             position: relative;
             animation: floaty 5s ease-in-out infinite;
         }
+
 
         .logo::after {
             content: none;
@@ -320,10 +320,14 @@
             }
         }
 
+
+
+
         @media (max-width:480px) {
             .logo {
-                width: 48px;
-                height: 48px
+                width: 78px;
+                /* avant : 48px */
+                height: 78px;
             }
 
             .btn {
@@ -366,7 +370,7 @@
     <div class="wrap">
         <header>
             <div class="brand">
-                <div class="logo" aria-hidden="true"></div>
+                <div class="logo" aria-hidden="true"><img src="./Nasser.jpg" alt=""></div>
                 <div class="title">
                     <b>Nasser Manessour</b>
                     <span>Marseille — Transports • Logistique • Sécurité</span>
